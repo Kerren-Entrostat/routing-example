@@ -5,8 +5,8 @@ read name
 echo "export PORT=3000" >> /etc/profile
 echo "export SERVER_NAME=$name" >> /etc/profile
 
-sudo snap install --edge node --classic
-npm install
-npm install -g pm2@latest
+curl -sSL https://get.docker.com/ | sh
 
-pm2 start server.js
+docker build -t hello/server
+
+docker run -p 3000:3000 -e PORT=$PORT -e SERVER_NAME=$SERVER_NAME hello/server
