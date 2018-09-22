@@ -8,5 +8,5 @@ RUN npm install
 
 COPY . .
 
-ENTRYPOINT [ "npm" ]
-CMD [ "start" ]
+ENTRYPOINT [ "node" ]
+CMD [ "/app/server.js" ]
