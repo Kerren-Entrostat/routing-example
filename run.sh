@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Enter the name of the server:\n"
+echo "Enter the name of the server:"
 read name
 
 echo "export PORT=3000" >> /etc/profile
